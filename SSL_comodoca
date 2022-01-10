@@ -1,0 +1,15 @@
+const express = require('express')
+const app = express()
+const port = 80
+ 
+app.get('/.well-known/pki-validation/DA166ED3C31BCF575FD416EE9835FCA6.txt', (req, res) => {
+    // contents of DA166ED3C31BCF575FD416EE9835FCA6.txt file
+ 
+    res.send(`5222312F9CD47B2289959694E736F9ADD81425D6F127FD3691776ECDF60BA777
+comodoca.com
+e04d823ba2f46d0`)
+})
+ 
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
